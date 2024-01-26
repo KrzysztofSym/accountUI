@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+/*===== VARIABLES CSS =====*/
+
+:root {
+    --h1-fs: 2rem;    --h1-fs-media: 3rem; 
+    --h2-fs: 1.5rem;  --h2-fs-media: 2rem;
+    --h3-fs: 1.3rem;  --h3-fs-media: 1.8rem;
+    --h4-fs: 1.1rem;  --h4-fs-media: 1.5rem;
+    --p-fs: .8rem;    --p-fs-media: 1.1rem;
+    --a-fs: .7rem;    --a-fs-media: 1.1rem;
+    --li-fs: .7rem;   --li-fs-media: 1.1rem;    
+
+    --clr-bg-main: #d7e3ef;
+    --clr-bg-pri: #e6eef4;
+    --clr-bg-sec: #2c2455;
+    --clr-acc-main: #8f8ba1;
+    --clr-acc-pri: #009885;
+    --clr-acc-sec: #33cbb8;
+    --clr-acc-thi: #d80000;
+    --clr-acc-four: #ad0000;
+    --clr-acc-fif: #e03333;
+    --clr-text-main: #4d476b;
+    --clr-text-pri: #8f8ba1;  
+    
+    --shadow-color: #33cbb8;    
+    --main-ff: 'Poppins', sans-serif;
+  }
+
+/*===== BASE =====*/
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--main-ff);
+    font-size: var(--p-fs);
+    background: var(--clr-bg-main);
+    color: var(--clr-text-main);
+    width: 100%;
+    min-height: 100vh;
+}   
+
+h1, h2, h3, h4,
+p, a, li {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-text-main);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@keyframes scaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+
+    }
+}
+    /* animation: scaleUp 1s ease-in-out;
+    transform-origin: center center; */
+
+/*===== BUTTONS =====*/
+
+.btn {
+    display: inline-block;
+    background-color:  var(--clr-bg-sec);
+    color: #fff;
+    padding: 1rem 1.5rem;
+    border: none;
+    margin-top: 1rem;
+    border-radius: 5px;
+    border: none;   
+    cursor: pointer;
+    white-space: nowrap;
+    transition: .2s;
+}
+  
+.btn:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .55);
+}
+
+.btn:active {
+    scale: .97;
+}
+
+/*===== PROJECT CSS =====*/
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    min-width: 300px;
+    position: relative;
+    animation: scaleUp 1s ease-in-out;
+    transform-origin: center center;
+    display: flex;
+    justify-content: center;
+}
+
+.container nav {
+    display: inline-block;
+    margin-top: auto;
+    background: var(--clr-bg-pri);
+    padding: .2rem;
+    border-radius: 1.55rem;
+}
+
+
+nav > .material-symbols-outlined {
+    display: block;
+    font-size: 1.5rem;
+    margin: 0.2rem;
+    width: 2.6rem;
+    line-height: 2.6rem;
+    text-align: center;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    transition: .2s;
+}
+
+nav > .material-symbols-outlined:nth-child(3) {
+    transform: rotate(45deg);
+}
+
+nav > .material-symbols-outlined {
+    color: var(--clr-acc-main);
+}
+
+nav > .material-symbols-outlined:hover {
+    box-shadow: 0px 2px 5px -2px var(--clr-bg-sec);
+}
+
+nav > .material-symbols-outlined:nth-child(1) {
+    animation: .4s showUp .7s backwards ease-in-out;
+}
+
+nav > .material-symbols-outlined:nth-child(2) {
+    animation: .4s showUp 1s backwards ease-in-out;
+}
+
+nav > .material-symbols-outlined:nth-child(3) {
+    animation: .4s showUp 1.3s backwards ease-in-out;
+}
+
+nav > .material-symbols-outlined:nth-child(4) {
+    animation: .4s showUp 1.6s backwards ease-in-out;
+}
+
+
+span.active {
+    color: var(--clr-text-main);
+    box-shadow: 0px 2px 5px -2px var(--clr-bg-sec);
+}
+
+
+
+.user, .permission {
+    display: inline-block;
+    width: 300px;
+    position: relative;
+    background: #fff;
+    text-align: center;
+    border-radius: 20px;
+    margin-left: 2rem;
+    padding: 1rem;
+}
+
+.user img {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    left: 50%;
+    top: 0;
+    object-fit: cover;
+    object-position: top;
+    transform: translate(-50%, -50%);
+}
+
+.user h2 {
+    margin-top: 4rem;
+}
+
+.permission {
+    width: 350px;
+    text-align: left;
+    padding-left: 3rem;
+    margin-top: 2rem;
+}
+
+.permission > span {
+    position: absolute;
+    left: 1rem;
+}
+
+.inf {
+    background: var(--clr-bg-pri);
+    margin: .5rem 0;
+    padding: .4rem;
+    border-radius: 3px;
+    border: 1px solid lightgray;
+}
+
+@keyframes showUp {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    75% {
+        opacity: 1;
+        transform: scale(1.2);
+
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
